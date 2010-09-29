@@ -142,7 +142,7 @@ class TableOfContentsPlugin(CMSPluginBase):
     # Takes a tree of anchor nodes and returns a list for the stucture
         struct = []
         for child in anchors:
-            struct.append(TableOfContentsPlugin.TemplateMarkup("opennode"))
+            struct.append(TableOfContentsPlugin.TemplateMarkup("opennode", open=True))
             struct.append(TableOfContentsPlugin.TemplateMarkup("title", child.title, page_node.href, child.tag))
             children = self.getAnchorStructure(page_node, child.children)
             if children:
