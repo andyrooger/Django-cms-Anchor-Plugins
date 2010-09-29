@@ -1,9 +1,10 @@
 Django-cms Anchor Plugins
 =========================
-###### by Andy Gurden - [as.gurden@gmail.com](mailto:as.gurden@gmail.com]
+###### by Andy Gurden - [as.gurden@gmail.com](mailto:as.gurden@gmail.com)
 
 
 Currently there are 3 plugins:
+
 * Anchor
 * AnchorLink
 * TableOfContents
