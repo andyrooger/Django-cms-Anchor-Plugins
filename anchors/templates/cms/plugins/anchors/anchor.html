@@ -1,0 +1,7 @@
+{% spaceless %}
+{% if hdr_exists %}
+<h{{ object.hdr_level }} id="{{ object.tag }}">{{ object.text_content }}</h{{ object.hdr_level }}>
+{% else %}
+<span id="{{ object.tag }}">{{ object.text_content }}</span>
+{% endif %}
+{% endspaceless %}

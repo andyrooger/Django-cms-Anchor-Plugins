@@ -1,0 +1,52 @@
+/* Display for entire toc */
+.toc{
+  padding: 10px;
+}
+
+.toc ul, .toc ol{
+  padding: 3px;
+}
+
+.toc .title{
+  font-weight: bold;
+}
+
+.toc .title.current{
+  font-style: italic;
+}
+
+/* Display for subtrees */
+.toc .anchors{
+  border-style: dotted;
+  border-width: 1px;
+  background-color: #FFFBE5;
+}
+
+.toc .anchors .title{
+  font-weight: normal;
+}
+
+.toc .children{
+}
+
+/* Display for nodes */
+.toc .item{
+}
+
+.toc .item.closed>.collapsible{
+  display: none;
+}
+
+/* Display for expand or collapse button */
+.toc .item>.manipulator{
+  display: none;
+  height: 11px;
+  width: 11px;
+  margin-left: 0.5em;
+  vertical-align: middle;
+  background-image: url('../img/minus.png')
+}
+
+.toc .item.closed>.manipulator{
+  background-image: url('../img/plus.png')
+}

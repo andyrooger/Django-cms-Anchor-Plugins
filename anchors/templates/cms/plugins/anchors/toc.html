@@ -1,0 +1,35 @@
+<div class="mod mod-highlight">
+<div class="hd"><h4>Table of Contents</h4></div>
+<div class="bd">
+<div class="toc">{% spaceless %}
+{% for c in content %}
+  {% ifequal c.type "title" %}
+    {% if c.current %}
+      <span class='title current'>{{ c.text|safe }}</span>
+    {% else %}
+      {% if c.link %}<a href='{{ c.link|safe }}{% if c.anchor %}#{{ c.anchor }}{% endif %}'>{% endif %}
+      <span class='title'>{{ c.text|safe }}</span>
+      {% if c.link %}</a>{% endif %}
+    {% endif %}
+    <div class="manipulator"></div>
+  {% else %}{% ifequal c.type "openlist" %}
+    {% if object.numbered %}<ol>{% else %}<ul>{% endif %}
+  {% else %}{% ifequal c.type "closelist" %}
+    {% if object.numbered %}</ol>{% else %}</ul>{% endif %}
+  {% else %}{% ifequal c.type "opennode" %}
+    <li class='item{% if not c.open %} closed{% endif %}'>
+  {% else %}{% ifequal c.type "closenode" %}
+    </li>
+  {% else %}{% ifequal c.type "openanchors" %}
+    <div class="anchors collapsible">
+  {% else %}{% ifequal c.type "closeanchors" %}
+    </div>
+  {% else %}{% ifequal c.type "openchildren" %}
+    <div class="children collapsible">
+  {% else %}{% ifequal c.type "closechildren" %}
+    </div>
+  {% endifequal %}{% endifequal %}{% endifequal %}{% endifequal %}{% endifequal %}{% endifequal %}{% endifequal %}{% endifequal %}{% endifequal %}
+{% endfor %}
+{% endspaceless %}</div>
+</div>
+</div>
