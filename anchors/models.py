@@ -61,8 +61,8 @@ class TableOfContents(CMSPlugin):
     
     root_page = models.ForeignKey(Page, verbose_name=_("root page"))
     numbered = models.BooleanField(_("is numbered"), default=True)
-    show_root = models.BooleanField(_("show root page"), default=False)
-    link_root = models.BooleanField(_("link root page"), default=False)
+    show_root = models.BooleanField(_("show root page"), default=True)
+    link_root = models.BooleanField(_("link root page"), default=True)
     branch_behaviour = models.PositiveSmallIntegerField(_("initially open branches"), choices=BRANCH_STATES, default=3)
     anchor_visibility = models.PositiveSmallIntegerField(_("visible anchors"), choices=ANCHOR_STATES, default=2)
     
