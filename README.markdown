@@ -30,4 +30,4 @@ TableOfContents
 
 Creates a table of contents including pages and optionally anchors from each page under the chosen root (and possibly including the root).
 
-If the user has JavaScript enabled they should be able to expand and collapse tree nodes freely.
+If the user has JavaScript enabled (and jQuery included) then they should be able to expand and collapse tree nodes freely.
