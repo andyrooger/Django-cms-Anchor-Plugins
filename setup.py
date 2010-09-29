@@ -8,7 +8,7 @@ setup(
     name = "django-cms-anchor-plugins",
     version = "0.0.1",
     url = "http://github.com/andyrooger/Django-cms-Anchor-Plugins",
-    license = "GPL",
+    license = "BSD",
     description = "django-cms plugins for anchor functionality",
     long_description = read('README.markdown'),
     author = "Andy Gurden",
